@@ -2093,7 +2093,7 @@ input[type="number"] {
     position: relative;
     margin: 0;
     padding-left: 0;
-    background-color: #fff;
+    background-color: rgb(52, 55, 68)  !important;
 }
 
 .el-menu--horizontal > .el-menu-item:not(.is-disabled):focus,
