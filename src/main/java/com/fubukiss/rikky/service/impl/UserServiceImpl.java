@@ -72,9 +72,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         // 设置邮件接收者
         simpleMailMessage.setTo(email);
         // 设置邮件主题
-        simpleMailMessage.setSubject("[悦刻外卖]登陆验证码");
+        simpleMailMessage.setSubject("[技大外卖]登陆验证码");
         // 设置邮件内容
-        simpleMailMessage.setText("欢迎使用悦刻外卖平台\n您的验证码为：" + code + "，请在" + TIME_OUT_MINUTES + "分钟内使用！\n【该邮件为系统自动发送，请勿回复】");
+        simpleMailMessage.setText("欢迎使用技大外卖平台\n您的验证码为：" + code + "，请在" + TIME_OUT_MINUTES + "分钟内使用！\n【该邮件为系统自动发送，请勿回复】");
         // 将验证码存入redis，设置失效时间TIME_OUT_MINUTES分钟
         redisTemplate.opsForValue().set(email, code, TIME_OUT_MINUTES, java.util.concurrent.TimeUnit.MINUTES);
         // 发送邮件
